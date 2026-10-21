@@ -108,6 +108,34 @@
     </div>
   </footer>
 
+  <!-- CHATBOT WIDGET -->
+  <button class="chat-fab" id="chatToggle" title="Chat with AI">
+    <span class="chat-fab-icon">💬</span>
+  </button>
+
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">AI</div>
+        <div>
+          <div class="chat-name">Deepak's Assistant</div>
+          <div class="chat-status">Powered by Gemini</div>
+        </div>
+      </div>
+      <button class="chat-close" id="chatClose">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg bot">
+        <span>Hi! I'm Deepak's AI assistant. Ask me anything about his work, skills, or projects! 🚀</span>
+      </div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chatInput" placeholder="Type a message..." autocomplete="off" />
+      <button id="chatSend">➤</button>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
