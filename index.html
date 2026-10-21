@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deepak | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">Deepak.</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="greeting">Hi there 👋, I'm</p>
+      <h1>Deepak</h1>
+      <p class="tagline">Developer &nbsp;·&nbsp; Creator &nbsp;·&nbsp; Problem Solver</p>
+      <a href="#projects" class="btn">See My Work</a>
+      <a href="#contact" class="btn outline">Hire Me</a>
+    </div>
+    <div class="hero-graphic">
+      <div class="avatar-ring">
+        <div class="avatar">D</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I'm a passionate developer who loves building beautiful, functional digital
+      experiences. I enjoy turning complex problems into simple, elegant solutions.
+      When I'm not coding, you'll find me exploring new technologies and sharing
+      knowledge with others.
+    </p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">🛒</div>
+        <h3>E-Commerce App</h3>
+        <p>A full-stack shopping platform with cart, payments, and admin dashboard.</p>
+        <div class="tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🤖</div>
+        <h3>AI Chat Assistant</h3>
+        <p>An intelligent chatbot powered by Claude API for customer support.</p>
+        <div class="tags"><span>Python</span><span>Claude API</span><span>FastAPI</span></div>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>Analytics Dashboard</h3>
+        <p>Real-time data visualization dashboard with interactive charts and reports.</p>
+        <div class="tags"><span>Vue.js</span><span>D3.js</span><span>PostgreSQL</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section dark">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill"><span class="skill-icon">🌐</span>HTML &amp; CSS</div>
+      <div class="skill"><span class="skill-icon">⚡</span>JavaScript</div>
+      <div class="skill"><span class="skill-icon">⚛️</span>React</div>
+      <div class="skill"><span class="skill-icon">🐍</span>Python</div>
+      <div class="skill"><span class="skill-icon">🗄️</span>Databases</div>
+      <div class="skill"><span class="skill-icon">🚀</span>DevOps</div>
+      <div class="skill"><span class="skill-icon">🤖</span>AI / ML</div>
+      <div class="skill"><span class="skill-icon">📱</span>Responsive Design</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2>Get In Touch</h2>
+    <p>Have a project in mind? Let's build something great together.</p>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Built with ❤️ by Deepak &nbsp;·&nbsp; Deployed on Vercel</p>
+    <div class="socials">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <!-- CHATBOT WIDGET -->
+  <button class="chat-fab" id="chatToggle" title="Chat with AI">
+    <span class="chat-fab-icon">💬</span>
+  </button>
+
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">AI</div>
+        <div>
+          <div class="chat-name">Deepak's Assistant</div>
+          <div class="chat-status">Powered by Gemini</div>
+        </div>
+      </div>
+      <button class="chat-close" id="chatClose">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg bot">
+        <span>Hi! I'm Deepak's AI assistant. Ask me anything about his work, skills, or projects! 🚀</span>
+      </div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chatInput" placeholder="Type a message..." autocomplete="off" />
+      <button id="chatSend">➤</button>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
