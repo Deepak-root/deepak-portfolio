@@ -88,13 +88,18 @@ async function sendMessage() {
     });
 
     const data = await res.json();
+    if (data.error) {
+      typing.remove();
+      appendMsg('API Error: ' + data.error.message, 'bot');
+      return;
+    }
     const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text || 'Sorry, I could not get a response.';
     history.push({ role: 'model', parts: [{ text: reply }] });
 
     typing.remove();
     appendMsg(reply, 'bot');
-  } catch {
+  } catch (err) {
     typing.remove();
-    appendMsg('Oops! Something went wrong. Please try again.', 'bot');
+    appendMsg('Error: ' + err.message, 'bot');
   }
 }
