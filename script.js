@@ -35,7 +35,7 @@ document.querySelectorAll('.card, .skill').forEach(el => {
 });
 
 // ── GEMINI CHATBOT ──
-const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${window.GEMINI_KEY || ''}`;
+const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
 
 const chatToggle  = document.getElementById('chatToggle');
 const chatWindow  = document.getElementById('chatWindow');
@@ -78,7 +78,7 @@ async function sendMessage() {
   try {
     const res = await fetch(GEMINI_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'x-goog-api-key': window.GEMINI_KEY || '' },
       body: JSON.stringify({
         system_instruction: {
           parts: [{ text: "You are Deepak's friendly portfolio assistant. Deepak is a developer skilled in React, Node.js, Python, AI/ML, and databases. Answer visitor questions about his work, skills, and projects. Keep replies concise and helpful." }]
